@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="The perfect personal assistant. Relaxr does your job for you so you can enjoy life as it is meant to be.">
+
+		<title>Relaxr Blog</title>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,300,600,800' rel='stylesheet' type='text/css'>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/style.css">
+
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<h1 class="logo">Relaxr</h1>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="blog.html">Blog</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<section id="main">
+			<div class="container">
+
+			<form>
+
+			<div class="form-row">
+				<label for="firstName">First Name</label>
+				<input type="text" name="firstName" id="firstName">
+
+				<label for="lastName">Last Name</label>
+				<input type="text" name="lastName" id="lastName">
+ 			</div>
+
+ 			<div class="form-row">	
+ 				<label for="phone">Phone Number</label>
+				<input type="text" name="phone[area_code]" class="phone" maxlength="3" id="phoneAC"> -
+                 <input type="text" name="phone[prefix]" class="phonePre" maxlength="3"> -
+                 <input type="text" name="phone[line_number]" class="phoneLN" maxlength="4">
+            </div>
+
+            <div class="form-row">
+                <label for="address" id="addressLabel">Address</label>
+                <div class="address-fields">
+                    <input type="text" name="address[street_address]" placeholder="Street Address" class="address-street-address" id="address">
+                    <input type="text" name="address[line_2]" placeholder="Address Line 2" class="address-line-2">
+                    <input type="text" name="address[city]" placeholder="City" class="address-city">
+                    <input type="text" name="address[state]" placeholder="State" class="address-state">
+                    <input type="text" name="address[postal_code]" placeholder="Postal Code" class="address-postal-code">
+                </div>
+            </div>
+
+            <div class="form-row">	
+            	<label for="emailAddress" id="emailLabel">Email Address</label>
+            	<input type="email" name="email" placeholder="xxxxxx@xxxxx.xxx" class="email">
+            </div>
+
+            <div class="form-row">
+				<label for="contactMethod" id="contactLabel">Preferred method of contact</label>
+				<select name="contactMethod" id="contactMethod">
+					<option value="blank" id="blank">[Method]</option>
+					<option value="email">Email</option>
+					<option value="phone">Phone</option>
+					<option value="mail">Mail</option>
+					<option value="pigeon">Carrier pigeon</option>
+					<option value="telegram">Telegram</option>
+				</select>
+			</div>
+
+			<div class="form-row">
+				<label for="interests" id="interestsLabel">Interests (Select all that apply)</label>
+					<div id="buttons">	
+					 <input type="radio" name="animals" value="animals"> Animals<br>
+					 <input type="radio" name="music" value="music"> Music<br>
+					 <input type="radio" name="movies" value="movies"> Movies<br>
+					 <input type="radio" name="sleeping" value="sleeping"> Sleeping<br>
+					 <input type="radio" name="gardening" value="gardening"> Gardening<br>
+					 <input type="radio" name="travel" value="travel"> Travel<br>
+					 <input type="radio" name="TV" value="TV"> Binge-watching TV<br>
+					 </div>
+
+			</div>
+			
+			<div class="form-row">	
+				<button id="reset">Clear Form</button>
+			</div>
+
+			<div class="form-row">		
+					<input type="submit" value="Register Now!" id="submit">
+			</div>
+				
+			</form>
+			</div>
+		</section>
+
+		<footer>
+			<h4 class="logo">Relaxr</h4>
+
+			<ul>
+				<li><a href="#"><img src="images/twitter.png" alt="Twitter logo"></a></li>
+				<li><a href="#"><img src="images/facebook.png" alt="Facebook logo"></a></li>
+			</ul>
+
+			<p class="copyright">Copyright 2015. Relaxr.</p>
+		</footer>
+
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="js/js.js"></script>
+	</body>
+</html>
