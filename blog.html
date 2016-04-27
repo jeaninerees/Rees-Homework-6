@@ -1,3 +1,16 @@
+<!--
+    Hi Jeanine! I added feedback about your code in HTML comments like this one.
+
+    Overall, nice job with the form!  I definitely feel that you have a strong handle on
+    form elements.  
+
+    One note about your code formatting - make sure to indent your form elements properly 
+    inside the <form> tag.  It makes the code a bit easier to read in terms of seeing
+    exactly which tags are nested inside of each other.
+
+    More comments below!
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -30,6 +43,16 @@
 
 			<form>
 
+            <!--
+                I really like how you are using a container <div> tag to group together different,
+                related parts of the form.
+
+                Take a look at the <fieldset> tag.  That is a great alternative to using <div>
+                tags here.  (It is not something I had the time to go over in class, but it
+                does make forms more semantic when you are grouping fields together as you are here.)
+
+                http://www.w3schools.com/tags/tag_fieldset.asp
+            -->
 			<div class="form-row">
 				<label for="firstName">First Name</label>
 				<input type="text" name="firstName" id="firstName">
@@ -40,6 +63,12 @@
 
  			<div class="form-row">	
  				<label for="phone">Phone Number</label>
+                <!--
+                    Nice use of the maxlength attribute here!  Also, very nice find with the 
+                    convention of using names with square brackets.  That is a convention
+                    that is commonly used to, moreso to make sending the information from the
+                    form easier for the backend.
+                -->
 				<input type="text" name="phone[area_code]" class="phone" maxlength="3" id="phoneAC"> -
                  <input type="text" name="phone[prefix]" class="phonePre" maxlength="3"> -
                  <input type="text" name="phone[line_number]" class="phoneLN" maxlength="4">
@@ -52,6 +81,12 @@
                     <input type="text" name="address[line_2]" placeholder="Address Line 2" class="address-line-2">
                     <input type="text" name="address[city]" placeholder="City" class="address-city">
                     <input type="text" name="address[state]" placeholder="State" class="address-state">
+                    <!--
+                        Just a thought: It might be better to use the input type "number" here for
+                        postal code instead.  However, keep in mind that is only a feasible idea
+                        if you are sure you are expecting US addresses - lots of foreign addresses
+                        have postal codes that include letters too.
+                    -->
                     <input type="text" name="address[postal_code]" placeholder="Postal Code" class="address-postal-code">
                 </div>
             </div>
@@ -64,6 +99,14 @@
             <div class="form-row">
 				<label for="contactMethod" id="contactLabel">Preferred method of contact</label>
 				<select name="contactMethod" id="contactMethod">
+                    <!--
+                        More of a convention - with select box options, if we have one option
+                        that is not really an option - like the "blank" option you list first,
+                        you do not need to give it a value.  The value attribute should still
+                        exist, but the value of the value attribute can be blank, like this:
+
+                        <option value="" id="blank">[Method]</option>
+                    -->
 					<option value="blank" id="blank">[Method]</option>
 					<option value="email">Email</option>
 					<option value="phone">Phone</option>
@@ -76,6 +119,21 @@
 			<div class="form-row">
 				<label for="interests" id="interestsLabel">Interests (Select all that apply)</label>
 					<div id="buttons">	
+                    <!--
+                        With your radio buttons, make sure that all of the input fields
+                        for a single group of radio buttons all have the same name.  The name
+                        tells the browser that the radio buttons are all related to each other,
+                        which is what forces the user to only be able to select one.
+
+                        If you take a look at your page, you will see that users can select 
+                        multiple radio buttons - this is because they all have the same name.
+
+                        The name attribute for all of these radio buttons should be equal to the 
+                        value of the "for" attribute in your label above:
+
+                        <input type="radio" name="interests" value="animals"> Animals<br>
+                        <input type="radio" name="interests" value="music"> Music<br>
+                    -->
 					 <input type="radio" name="animals" value="animals"> Animals<br>
 					 <input type="radio" name="music" value="music"> Music<br>
 					 <input type="radio" name="movies" value="movies"> Movies<br>
